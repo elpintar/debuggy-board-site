@@ -2,7 +2,9 @@
 
 A site for our Electrical and Computer Engineering Capstone Design Project at Carnegie Mellon Unversity.
 
-Team Members:
+Team Members
+===
+
 - Erik Pintar
 - Aaron Reyes
 - Vivek Nair
