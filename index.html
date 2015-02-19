@@ -187,28 +187,84 @@
 				</div>
 			</div>
 
-
 		<!-- Highlights -->
-			<div class="wrapper style1">
+			<div class="wrapper style2">
 				<div class="title">The Requirements</div>
 				<div id="main" class="container">
 					<section id="features">
+						<header class="style1" style="margin: 0.5em 0.5em; padding: 0.5em 0.5em; border: 0.5em 0.5em;">
+							<h2>Functional</h2>
+						</header>
+						<header class="style1" style="margin: 0.5em 0.5em; padding: 0.5em 0.5em; border: 0.5em 0.5em; text-align: left">
+							<h2>Hardware</h2>
+						</header>
 						<div class="feature-list">
 							<div class="row">
-								<div class="6u">
+								<div class="12u">
 									<section>
-										<h3 class="icon fa-check">Aliquam consequat et feugiat</h3>
-										<p>Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate. Eget mattis at, laoreet vel velit lorem.</p>
+										<h3 class="icon fa-check">Nodal Voltages</h3>
+										<p>Measure all nodal voltages on breadboard and relay voltage data to software.</p>
 									</section>
 								</div>
-								<div class="6u">
+								<div class="12u">
 									<section>
-										<h3 class="icon fa-check">Dolore laoreet aliquam mattis</h3>
-										<p>Eget mattis at, laoreet vel et velit aliquam diam ante, aliquet sit amet vulputate. Eget mattis at, laoreet vel velit lorem.</p>
+										<h3 class="icon fa-check">Emergency Shutdown</h3>
+										<p>Detect dangerous user circuit errors (i.e., shorts) and power off the board to prevent hardware damage.</p>
+									</section>
+								</div>
+								<div class="12u">
+									<section>
+										<h3 class="icon fa-check">Status LED's</h3>
+										<p>Indicate the current status of each pin row on the breadboard via a green, yellow, or red LED.</p>
 									</section>
 								</div>
 							</div>
 						</div>
+						<header class="style1" style="margin: 0.5em 0.5em; padding: 0.5em 0.5em; border: 0.5em 0.5em; text-align: left">
+							<h2>Software</h2>
+						</header>
+						<div class="feature-list">
+							<div class="row">
+								<div class="12u">
+									<section>
+										<h3 class="icon fa-check">Circuit Diagramming</h3>
+										<p>Provide a user interface for symbolically diagramming circuits.  Automagically perform basic error checks on the circuit diagram via KCL and KVL.</p>
+									</section>
+								</div>
+								<div class="12u">
+									<section>
+										<h3 class="icon fa-check">Placing and Wiring Components</h3>
+										<p>Create an interface for placing and wiring circuit components from the circuit diagram on on virtual breadboard.</p>
+									</section>
+								</div>
+								<div class="12u">
+									<section>
+										<h3 class="icon fa-check">Debugging Feedback</h3>
+										<p>Provide real-time debugging feedback derived from nodal voltages.  Is my resistor disconnected?  Did I place the capacitor in the correct pins?</p>
+									</section>
+								</div>
+							</div>
+						</div>
+						<header class="style1" style="margin: 0.5em 0.5em; padding: 0.5em 0.5em; border: 0.5em 0.5em;">
+							<h2>Non-Functional</h2>
+						</header>
+						<div class="feature-list">
+							<div class="row">
+								<div class="12u">
+									<section>
+										<h3 class="icon fa-check">Safety</h3>
+										<p>The circuit should detect dangerously invalid circuits (such as short circuits and high currents)  and avoid unsafe operating conditions by shutting down.  As first priority, the circuit should not pose physical harm to users through unsafe operation.  Second, the circuit’s safety system should prevent internal damage.</p>
+									</section>
+								</div>
+								<div class="12u">
+									<section>
+										<h3 class="icon fa-check">Reliability</h3>
+										<p>We will have reliable and accurate nodal voltage readings for students to successfully understand the physical circuit.</p>
+									</section>
+								</div>
+							</div>
+						</div>
+					</div>
 					</section>
 				</div>
 			</div>
