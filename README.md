@@ -11,6 +11,13 @@ Team Members
 - Vivek Nair
 - Justin Frye
 
+How to Upload
+===
+
+Sample command:
+
+	scp -r ./* epintar@ece007.ece.cmu.edu:/afs/ece.cmu.edu/class/ece549/teams/team01/website
+
 Template Used
 ===
 

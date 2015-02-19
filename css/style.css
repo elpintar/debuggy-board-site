@@ -309,6 +309,12 @@
 				float: left;
 				margin: 0 2em 2em 0;
 			}
+
+			.image.right
+			{
+				float: right;
+				margin: 0 0 2em 2em;
+			}
 			
 			.image.centered
 			{
@@ -868,3 +874,31 @@
 			{
 				color: #fff;
 			}
+
+
+#bios section{
+	text-align: center;
+}
+
+#bios article.right{
+	text-align: left;
+	padding: 2em;
+}
+
+#bios article.left{
+	text-align: right;
+	padding: 2em;
+}
+
+#bios article p{
+	margin-bottom: .5em;
+}
+
+#bios article .button{
+	font-size: 0.5em;
+}
+
+#bios article img{
+	width: 160px;
+	height: 160px;
+}
