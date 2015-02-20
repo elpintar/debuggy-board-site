@@ -38,12 +38,12 @@
 					<!-- Nav -->
 						<nav id="nav">
 							<ul>
-								<li class="current"><a href="index.html">Home</a></li>
-								<li class="current"><a href="index.html#intro-wrapper">Concept</a></li>
-								<li class="current"><a href="index.html#main">Motivation</a></li>
-								<li class="current"><a href="index.html">Competitive Analysis</a></li>
-								<li class="current"><a href="index.html">Requirements</a></li>
-								<li class="current"><a href="index.html">Components</a></li>
+								<li class="current"><a href="index.html#concept">Concept</a></li>
+								<li class="current"><a href="index.html#motivation">Motivation</a></li>
+								<li class="current"><a href="index.html#team">Team</a></li>
+								<li class="current"><a href="index.html#comp-anal">Competitive Analysis</a></li>
+								<li class="current"><a href="index.html#req">Requirements</a></li>
+								<li class="current"><a href="index.html#comp">Components</a></li>
 							</ul>
 						</nav>
 <!-- 						<nav id="nav">
@@ -79,7 +79,7 @@
 		
 		<!-- Intro -->
 			<div id="intro-wrapper" class="wrapper style1">
-				<div class="title">The Concept</div>
+				<div class="title" id="concept">The Concept</div>
 				<section id="intro" class="container">
 					<p class="style1">What is (De)BuggyBoard?</p>
 					<p class="style2">
@@ -93,9 +93,50 @@
 				</section>
 			</div>
 		
+		<!-- Motivation -->
+			<div class="wrapper style2">
+				<div class="title" id="motivation">The Motivation</div>
+				<div id="main" class="container">
+					
+					<!-- Wires Image -->
+						<a href="#" class="image featured">
+							<img src="images/wires.jpg" alt="" />
+						</a>
+					
+					<!-- Explanation -->
+						<section id="features">
+							<header class="style1">
+								<h2>The future of introductory circuits education.</h2>
+								<p>This is (De)Buggy Board.</p>
+							</header>
+							<div class="feature-list">
+								<div class="row">
+									<div class="11u">
+										<section>
+											<p>With traditional breadboards, there is a lot of cutting wires, creating a mess of connections, and tediously testing each component with a multimeter when things go wrong.</p>
+										</section>
+									</div>
+									<div class="11u">
+										<section>
+											<p>With the (De)Buggy Board, the student will be able to see what voltages are at each node, current and resistance information, and perhaps most importantly, notice when something goes awry.</p>
+										</section>
+									</div>
+								</div>
+							</div>
+<!-- 							<ul class="actions actions-centered">
+								<li><a href="#" class="button style1 big">Get Started</a></li>
+								<li><a href="#" class="button style2 big">More Info</a></li>
+							</ul> -->
+						</section>
+				
+				</div>
+			</div>
+		
+
+
 		<!-- Team Members -->
-		<div class="wrapper style2">
-				<div class="title">The Team</div>
+		<div class="wrapper style3">
+				<div class="title" id="team">The Team</div>
 				<div id="main" class="container">
 					<div class="">
 							
@@ -162,109 +203,72 @@
 			</div>
 
 
-		<!-- Main -->
-			<div class="wrapper style3">
-				<div class="title">The Motivation</div>
-				<div id="main" class="container">
-					
-					<!-- Image -->
-						<a href="#" class="image featured">
-							<img src="images/wires.jpg" alt="" />
-						</a>
-					
-					<!-- Features -->
-						<section id="features">
-							<header class="style1">
-								<h2>The future of introductory circuits education.</h2>
-								<p>This is (De)Buggy Board.</p>
-							</header>
-							<div class="feature-list">
-								<div class="row">
-									<div class="11u">
-										<section>
-											<p>With traditional breadboards, there is a lot of cutting wires, creating a mess of connections, and tediously testing each component with a multimeter when things go wrong.</p>
-										</section>
-									</div>
-									<div class="11u">
-										<section>
-											<p>With the (De)Buggy Board, the student will be able to see what voltages are at each node, current and resistance information, and perhaps most importantly, notice when something goes awry.</p>
-										</section>
-									</div>
-								</div>
-							</div>
-<!-- 							<ul class="actions actions-centered">
-								<li><a href="#" class="button style1 big">Get Started</a></li>
-								<li><a href="#" class="button style2 big">More Info</a></li>
-							</ul> -->
-						</section>
-				
-				</div>
-			</div>
-		
 		<!-- Highlights -->
-			<div class="wrapper style3">
-				<div class="title">The Competitive Analysis</div>
+			<div class="wrapper style1">
+				<div class="title" id="comp-anal">The Competitive Analysis</div>
 				<div id="highlights" class="container">
 					<div class="row 150%">
 						<div class="6u">
 							<section class="highlight">
-								<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
-								<h3><a href="#">Build18 Projects</a></h3>
+								<a href="" class="image featured"><img src="images/build1814.jpg" alt="" /></a>
+								<h3><a href="">Build18 Projects</a></h3>
 								<p>There have been two similar projects within Carnegie Mellon’s annual Build18 hardware hackathon.</p> 
-								<p>The ProtoSmart team created a breadboard that sensed voltages at each row of a small breadboard.  However, that design was limited by the on-chip analog to digital converters of the microcontroller.</p>
-								<p>The Field Programmable Protoboard team set out to make a breadboard that wires rows together for you (auto-routing).  However, the sheer size of the routing became to complex to accomplish for them with transistors and shift registers.</p>
-								<ul class="actions">
-									<li><a href="#" class="button style1">Learn More</a></li>
-								</ul>
+								<p>The <a href="http://build18.ece.cmu.edu/wiki/index.php/ProtoSmart">ProtoSmart team</a> created a breadboard that sensed voltages at each row of a small breadboard.  However, that design was limited by the on-chip analog to digital converters of the microcontroller.</p>
+								<p>The <a href="http://build18.ece.cmu.edu/wiki/index.php/Field_Programmable_Proto-board">Field Programmable Protoboard team</a> set out to make a breadboard that wires rows together for you (auto-routing).  However, the sheer size of the routing became to complex to accomplish for them with transistors and shift registers.</p>
 							</section>
 						</div>
 						<div class="6u">
 							<section class="highlight">
-								<a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
-								<h3><a href="#">Egyptian Team</a></h3>
+								<a href="" class="image featured"><img src="images/egyptBoard.jpg" alt="" /></a>
+								<h3><a href="">Egyptian Team</a></h3>
 								<p>An eight-person team from Egypt designed an auto routing breadboard that uses a software backend to route nodes.  Their design and goals are similar to ours, but lack the real-time voltage tracking that is essential for our debugging application.</p>
 								<ul class="actions">
-									<li><a href="#" class="button style1">Learn More</a></li>
+									<li><a href="https://www.youtube.com/watch?v=2W9zznZocqw" class="button style4">Learn More</a></li>
+								</ul>
+							</section>
+						</div>
+						
+					<div class="row 150%">
+
+						<div class="6u">
+							<section class="highlight">
+								<a href="" class="image featured"><img src="images/productPic.png" alt="" /></a>
+								<h3><a href="">No Wires Breadboard</a></h3>
+								<p>This the only product for sale similar to our concept that we could find.</p>
+								<p>It has features similar to ours, such as an attached software to plan your breadboard wiring, and LEDs to guide placement.</p> 
+								<ul class="actions">
+									<li><a href="http://smartbreadboard.tictail.com" class="button style4">Learn More</a></li>
+								</ul>
+							</section>
+						</div>
+
+						<div class="6u">
+							<section class="highlight">
+								<a href="" class="image featured"><img src="images/smartBBvideo.png" alt="" /></a>
+								<h3><a href="">Bisko Smart BreadBoard</a></h3>
+								<p>This team is still a work in progress, but has a nifty video.</p>
+								<p>They aim to create a breadboard that communicates wirelessly with a computer or your smartphone, which is an interesting feature we are not including.</p>
+								<ul class="actions">
+									<li><a href="https://vimeo.com/98339147" class="button style4">See Video</a></li>
 								</ul>
 							</section>
 						</div>
 					</div>
 
-					<div class="row 150%">
-						<div class="6u">
-							<section class="highlight">
-								<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
-								<h3><a href="#">No Wires Breadboard</a></h3>
-								<p>This the only product for sale similar to our concept that we could find.</p>
-								<p>It has features similar to ours, such as an attached software to plan your breadboard wiring, and LEDs to guide placement.</p> 
-								<ul class="actions">
-									<li><a href="#" class="button style1">Learn More</a></li>
-								</ul>
-							</section>
-						</div>
-						<div class="6u">
-							<section class="highlight">
-								<a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
-								<h3><a href="#">Bisko Smart BreadBoard</a></h3>
-								<p>This team is still a work in progress, but has a nifty video.</p>
-								<ul class="actions">
-									<li><a href="https://vimeo.com/98339147" class="button style1">See Video</a></li>
-								</ul>
-							</section>
-						</div>
 					</div>
 				</div>
 			</div>
 
 		<!-- Highlights -->
 			<div class="wrapper style2">
-				<div class="title">The Requirements</div>
+				<div class="title" id="req">The Requirements</div>
 				<div id="main" class="container">
 					<section id="features">
 						<header class="style1" style="margin: 0.5em 0.5em; padding: 0.5em 0.5em; border: 0.5em 0.5em;">
 							<h2>Functional</h2>
+							<hr>
 						</header>
-						<header class="style1" style="margin: 0.5em 0.5em; padding: 0.5em 0.5em; border: 0.5em 0.5em; text-align: left">
+						<header class="style1" style="margin: 0.5em 0.5em; padding: 0.5em 0.5em; border: 0.5em 0.5em; text-align: left;">
 							<h2>Hardware</h2>
 						</header>
 						<div class="feature-list">
@@ -315,7 +319,9 @@
 							</div>
 						</div>
 						<header class="style1" style="margin: 0.5em 0.5em; padding: 0.5em 0.5em; border: 0.5em 0.5em;">
+							<br>
 							<h2>Non-Functional</h2>
+							<hr>
 						</header>
 						<div class="feature-list">
 							<div class="row">
@@ -339,102 +345,111 @@
 			</div>
 
 
+		<div class="wrapper style3">
+				<div class="title" id="comp">The Components</div>
+				<div id="main" class="container">
+					<div class="">
+							
+						<!-- Team Bios -->
+							<div id="components">
+								<section class="" style="text-align:center;">
+									<div id="intro">
+										<p class="style1">The crucial parts of our device.</p>
+									</div>
+									<ul class="style2">
+										<div class="component 3u">
+											<li>
+												<article>
+													<a class="image"><img src="images/crosspoint.png" alt="" /></a>
+													<h3><a href="#">Crosspoint Switch</a></h3>
+													<p>For the auto-routing feature and current sensing capabilities.</p>
+												</article>
+											</li>
+										</div>
+										<div class="component 3u">
+											<li>
+												<article>
+													<a class="image"><img src="images/mcu.png" alt="" /></a>
+													<h3><a href="">Microcontroller Unit</a></h3>
+													<p>We need only a simple MCU, will use an Atmel.</p>
+												</article>
+											</li>
+										</div>
+										<div class="component 3u">
+											<li>
+												<article>
+													<a class="image"><img src="images/adc.png" alt="" /></a>
+													<h3><a href="#">Analog to Digital Converter</a></h3>
+													<p>For voltage sensing, we need high quality ADCs.</p>
+												</article>
+											</li>
+										</div>
+										<div class="component 3u">
+											<li>
+												<article>
+													<a class="image"><img src="images/mux.png" alt="" /></a>
+													<h3><a href="#">Analog Mux</a></h3>
+													<p>For utilizing one sensor component across multiple channels.</p>
+												</article>
+											</li>
+										</div>
+										<div class="component 3u">
+											<li>
+												<article>
+													<a class="image"><img src="images/rgbLED.png" alt="" /></a>
+													<h3><a href="#">RGB LEDs</a></h3>
+													<p>For lighting up rows of the breadboard for feedback.</p>
+												</article>
+											</li>
+										</div>
+										<div class="component 3u">
+											<li>
+												<article>
+													<a class="image"><img src="images/breadboard.png" alt="" /></a>
+													<h3><a href="#">Small Breadboard</a></h3>
+													<p>The all-important breadboard.</p>
+												</article>
+											</li>
+										</div>
+										<div class="component 3u">
+											<li>
+												<article>
+													<a class="image"><img src="images/shiftRegister.png" alt="" /></a>
+													<h3><a href="#">Shift Register</a></h3>
+													<p>To send information down the LEDs in a simple manner.</p>
+												</article>
+											</li>
+										</div>
+										
+										
+
+									</ul>
+								
+								</section>
+							</div>
+							
+					</div>
+				</div>
+			</div>
+
+
 		<!-- Footer -->
 			<div id="footer-wrapper" class="wrapper">
-				<div class="title">The Rest Of It</div>
+				<div class="title">The Bottom of This Webpage</div>
 				<div id="footer" class="container">
 					<header class="style1">
-						<h2>Ipsum sapien elementum portitor?</h2>
+						<h2>Excited?</h2>
 						<p>
-							Sed turpis tortor, tincidunt sed ornare in metus porttitor mollis nunc in aliquet.<br />
-							Nam pharetra laoreet imperdiet volutpat etiam consequat feugiat.
+							I'm glad you made it to the bottom.  It shows you're interested! <br>
+							Updates to be posted periodically.
 						</p>
 					</header>
 					<hr />
-					<div class="row 150%">
-						<div class="6u">
-
-							<!-- Contact Form -->
-								<section>
-									<form method="post" action="#">
-										<div class="row 50%">
-											<div class="6u">
-												<input type="text" name="name" id="contact-name" placeholder="Name" />
-											</div>
-											<div class="6u">
-												<input type="text" name="email" id="contact-email" placeholder="Email" />
-											</div>
-										</div>
-										<div class="row 50%">
-											<div class="12u">
-												<textarea name="message" id="contact-message" placeholder="Message" rows="4"></textarea>
-											</div>
-										</div>
-										<div class="row">
-											<div class="12u">
-												<ul class="actions">
-													<li><input type="submit" class="style1" value="Send" /></li>
-													<li><input type="reset" class="style2" value="Reset" /></li>
-												</ul>
-											</div>
-										</div>
-									</form>
-								</section>
-
-						</div>
-						<div class="6u">
-						
-							<!-- Contact -->
-								<section class="feature-list small">
-									<div class="row">
-										<div class="6u">
-											<section>
-												<h3 class="icon fa-home">Mailing Address</h3>
-												<p>
-													Untitled Corporation<br />
-													1234 Somewhere Rd #987<br />
-													Nashville, TN 00000-0000
-												</p>
-											</section>
-										</div>
-										<div class="6u">
-											<section>
-												<h3 class="icon fa-comment">Social</h3>
-												<p>
-													<a href="#">@untitled-corp</a><br />
-													<a href="#">linkedin.com/untitled</a><br />
-													<a href="#">facebook.com/untitled</a>
-												</p>
-											</section>
-										</div>
-									</div>
-									<div class="row">
-										<div class="6u">
-											<section>
-												<h3 class="icon fa-envelope">Email</h3>
-												<p>
-													<a href="#">info@untitled.tld</a>
-												</p>
-											</section>
-										</div>
-										<div class="6u">
-											<section>
-												<h3 class="icon fa-phone">Phone</h3>
-												<p>
-													(000) 555-0000
-												</p>
-											</section>
-										</div>
-									</div>
-								</section>
-								
-						</div>
-					</div>
-					<hr />
+					
 				</div>
 				<div id="copyright">
 					<ul>
-						<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<li>&copy; Feb 2015</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 					</ul>
 				</div>
 			</div>
