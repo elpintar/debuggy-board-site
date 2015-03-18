@@ -28,7 +28,7 @@
             <li><a href="#team">Team</a></li>
             <li><a href="#req">Requirements</a></li>
             <li><a href="#comp">Components</a></li>
-            <li><a href="#comp-anal">Competitive Analysis</a></li>
+            <li><a href="#comp-anal">Competition</a></li>
             <li><a href="#prog">Progress</a></li>
           </ul>
         </nav>
@@ -68,13 +68,15 @@
             <p>This is (De)Buggy Board.</p>
           </header>
           <p class="style3">
-            With traditional breadboards, there is a lot of cutting wires,
-            creating a mess of connections, and tediously testing each
-            component with a multimeter when things go wrong.
+            With traditional breadboards, designs can quickly become a dense
+            forest of wires. This requires tedious testing strategies that
+            offer little educational value and tend to be time consuming.
           </p>
           <p class="style3">
             With the (De)Buggy Board, the student will be able to see what
-            voltages are at each node to quickly notice when something goes awry.
+            voltages are at each node to quickly notice when something
+            simple goes awry. This allows the student to quickly prototype
+            the circuit and get started with the lab at hand.
           </p>
         </div>
       </div>
@@ -89,7 +91,7 @@
           <header id="team_banner" class="style2">
             <p>Meet the JK Flip Flops.</p>
           </header>
-          <div class="row 150%" id="bios">
+          <div class="row" id="bios">
             <div class="3u">
               <div class="image"><img src="images/aaron.png" alt="" /></div>
               <h3>Aaron Reyes</h3>
@@ -229,15 +231,15 @@
                 Required to make auto-routing possible. The main design choice here was <a href="http://www.analog.com/en/products/switches-multiplexers/buffered-analog-crosspoints-arrays/ad8113.html">buffered</a>
                 or <a href="http://www.analog.com/en/products/switches-multiplexers/unbuffered-analog-crosspoint-arrays/ad75019.html#product-overview">unbuffered</a>. Buffered has low internal resistance but has
                 amplifiers on the outputs, which means we are "imitating" the user's signals and not routing them.
-                This can cause problems in circuits that use feedback. The unbuffered switch actually contains a
-                matrix of analog switches. This means a higher internal resistance (approx 200 ohms), but actually
-                routes signals instead of recreating them. They are also cheaper!</p>
+                This can cause problems in circuits that use feedback. The unbuffered switch just contains a
+                matrix of analog switches. This means a higher internal resistance (approx 200 ohms), but now we
+                actually route signals instead of recreating them. They are also cheaper!</p>
             </div>
             <div class="6u">
               <div class="image"><img src="images/adc.jpg" alt="" /></div>
               <h3><a href="http://www.analog.com/en/products/analog-to-digital-converters/ad-converters/ad7366-5.html">Analog to Digital Converter</a></h3>
               <p>
-                To sense the DC voltages, we need an external ADC. We cannot use the on-chip ADC
+                To sense the DC voltages, we need an external ADC. We cannot use the MCU's on-chip ADC
                 since the voltage reference of the MCU's ADC is limited by the max supply voltage of
                 the MCU. Limiting nodal voltage sampling to 0 to 5v is not user-friendly. Therefore,
                 our ADC will have high supply rails (+/- 12v) to give the user more possibilities.
@@ -251,7 +253,9 @@
               <p>
                 We need only a simple MCU. We decided to pick one with USB support in order to make
                 our communication protocol with the software application simple. Atmel MCU hack support
-                is fantastic online since the processor is used in arduino chips.
+                is fantastic online since the processor is widely used in arduino chips. This MCU is
+                responsible for receiving commands from the application to control the RGB LEDs, the
+                crosspoint switches, and track nodal voltages.
               </p>
             </div>
             <div class="6u">
@@ -266,27 +270,31 @@
           </div>
           <div class="row" style="text-align:center;">
             <div class="6u">
-              <div class="image"><img src="images/rgbLED.jpg" alt="" /></div>
-              <h3><a href="http://www.adafruit.com/product/619">RGB LEDs</a></h3>
-              <p>The SMD RGB LEDs used for each pin row on the breadboard.</p>
+              <div class="image"><img src="images/shiftregister.jpg" alt="" /></div>
+              <h3><a href="http://www.digikey.com/product-detail/en/SN74HC595DR/296-14857-1-ND/562567">Shift Registers</a></h3>
+              <p>
+                Used to minimize IO from the MCU used to control the RGB LEDS along the breadboard.
+                Nothing crazy here. Just some simple 8 bit shift registers. We need 6 ICs per a given
+                color to control a 48 node breadboard with an RGB LED for each node. Therefore, we
+                need 18 total ICs.
+              </p>
             </div>
             <div class="6u">
               <div class="image"><img src="images/breadboard.jpg" alt="" /></div>
               <h3><a href="https://www.pololu.com/product/350">Small Breadboard</a></h3>
               <p>
                 The all-important breadboard. Due to our budget, we can only afford a 48
-                node board.
+                node board. We achieve this by daisy chaining crosspoint switches. Using
+                a 16x16 switch, we need a grid of 9 switches total to have 48 unique nodes.
+                These 9 switches will exhaust the majority of our budget.
               </p>
             </div>
           </div>
           <div class="row" style="text-align:center;">
             <div class="6u">
-              <div class="image"><img src="images/shiftregister.jpg" alt="" /></div>
-              <h3><a href="http://www.digikey.com/product-detail/en/SN74HC595DR/296-14857-1-ND/562567">Shift Registers</a></h3>
-              <p>
-                Used to minimize IO from the MCU used to control the RGB LEDS along the breadboard.
-                Nothing crazy here. Just some simple SMD shift registers.
-              </p>
+              <div class="image"><img src="images/rgbLED.jpg" alt="" /></div>
+              <h3><a href="http://www.adafruit.com/product/619">RGB LEDs</a></h3>
+              <p>The SMD RGB LEDs used for each pin row on the breadboard (48 total).</p>
             </div>
           </div>
         </div>
@@ -315,9 +323,11 @@
               <div class="image"><img src="images/productPic.png" alt="" /></div>
               <h3>No Wires Breadboard</h3>
               <p>
-                This the only product for sale similar to our concept that we could find.
+                This the only product similar to our concept that we could find.
                 It has features similar to ours, such as an attached software to plan your
-                breadboard wiring, and LEDs to guide placement.
+                breadboard wiring, and LEDs to guide placement. As it turns out, this product
+                is actually made by the Egyptian Team. This product is currently not for sale
+                as it is still in development.
               </p>
               <a href="http://smartbreadboard.tictail.com" class="button style3">Learn More</a>
             </div>
@@ -368,7 +378,39 @@
     <div class="wrapper style2">
       <div class="title" id="prog">Progress</div>
       <div class="container">
-      <p>Update me :)</p>
+        <header class="style1">
+          <h2>So what have we done so far?</h2>
+          <p><i>"If there is no struggle, there is no progress."</i> - Frederick Douglass</p>
+          <hr>
+        </header>
+        <div class="feature-list">
+          <div class="row">
+            <div class="12u">
+              <h3 class="icon fa-code">16 March 2015</h3>
+              <p>
+                <a target="blank" href="images/updates/3_16_2015_sw.png">Bare-bone circuit routing GUI</a>.
+                Working on symbolic circuit diagrammer UI and enhancing circuit routing UI.
+              </p>
+              <p>
+                <a target="blank" href="images/updates/3_16_2015_hw.png">Eagle schematic of LEDs and MCU with peripherals</a>.
+                Working on adding ADC with muxes and then making sure design passes ERC check.
+              </p>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="row 90%">
+          <div class="6u" style="text-align: center;">
+            <a href="https://github.com/elpintar/debuggy-board-app" class="button style1" target="blank">
+              <span class="icon fa-github fa-lg"></span>Software Repo
+            </a>
+          </div>
+          <div class="6u" style="text-align: center;">
+            <a href="https://github.com/jmfrye/DeBuggyBoard" class="button style1" target="blank">
+              <span class="icon fa-github fa-lg"></span>Hardware Repo
+            </a>
+          </div>
+        </div>
       </div>
     </div>
 
