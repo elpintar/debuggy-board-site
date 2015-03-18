@@ -30,16 +30,15 @@ n33.co @n33co dribbble.com/n33
 
 Credits:
 
-	Demo Images:
-		Felicia Simion (ineedchemicalx.deviantart.com)
-	
+	Banner Image:
+    Felicia Simion (ineedchemicalx.deviantart.com)
+
+
 	Icons:
 		Font Awesome (fortawesome.github.com/Font-Awesome)
-	
+
 	Other:
+    skel (n33.co)
 		jQuery (jquery.com)
-		html5shiv.js (@afarkas @jdalton @jon_neal @rem)
-		CSS3 Pie (css3pie.com)
 		background-size polyfill (github.com/louisremi)
-		jquery.dropotron (n33.co)
-		skel (n33.co)
+
