@@ -42,3 +42,7 @@ Credits:
 		jQuery (jquery.com)
 		background-size polyfill (github.com/louisremi)
 
+URL
+===
+
+http://www.ece.cmu.edu/~ece549/spring15/team01/website/
