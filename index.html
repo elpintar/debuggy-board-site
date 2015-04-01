@@ -397,8 +397,6 @@
               </p>
             </div>
           </div>
-        </div>
-        <div class="feature-list">
           <div>
             <div class="12u">
               <h3 class="icon fa-code">23 March 2015</h3>
@@ -407,8 +405,23 @@
                 Working on connecting pySPICE to a circuit diagrammer UI and drawing resistors and capacitors as wire objects instead of blocks.
               </p>
               <p>
-                <a target="blank" href="images/updates/3_16_2015_hw.png">Near-complete Eagle schematic for full hardware design</a>.
-                Working on finalizing schematic.
+                <a target="blank" href="images/updates/3_23_2015_hw.png">Near-complete Eagle schematic for full hardware design without switching matrix</a>.
+                Working on connecting muxes, ADC, and shift registers to MCU to minimize IO usage. After adding power circuit to schematic, we will
+                layout our PCB and make a custom part/footprint for the breadboard to connect to the PCB (hopefully all by next checkpoint).
+              </p>
+            </div>
+          </div>
+          <div>
+            <div class="12u">
+              <h3 class="icon fa-code">30 March 2015</h3>
+              <p>
+                <a target="blank" href="images/updates/3_30_2015_sw.png">Circuit Solving using Ahkab and Symbolic Circuit Diagrammer Design:</a>  (1) We can solve basic circuits using Ahkab (Python circuit solving library), reading in circuits from netlist files.  Our circuit diagrammer will ultimately output a netlist file to Ahkab for analysis.  (2) We planned the design for the symbolic circuit diagrammer, allowing for significant code reuse with the existing circuit router.  (3) We also made UI updates to the circuit router with improved graphics for wires and resistors.  (4) We fixed a bug in our node detection algorithm.
+              </p>
+              <p>
+                <a target="blank" href="images/updates/3_30_2015_hw.png">Completed eagle schematic</a>!
+                We will have the PCB layout by <strong>next checkpoint</strong> with all parts in our parts list ordered.
+                While the board is being fabbed, we will write the firmware and collect our parts. <a href="https://docs.google.com/spreadsheets/d/19jtvPiaG86AgUPa70dK08edDl3pxMptlXzroNsNZUoE/edit?usp=sharing">Here</a>
+                is our full parts list.
               </p>
             </div>
           </div>
