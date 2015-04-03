@@ -29,6 +29,7 @@
             <li><a href="#req">Requirements</a></li>
             <li><a href="#comp">Components</a></li>
             <li><a href="#comp-anal">Competition</a></li>
+            <li><a href="#design">Design</a></li>
             <li><a href="#prog">Progress</a></li>
           </ul>
         </nav>
@@ -370,6 +371,66 @@
               <a href="https://vimeo.com/98339147" class="button style3">See Video</a>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+
+<!-- Design -->
+    <div class="wrapper style3">
+      <div class="title" id="design">Design</div>
+      <div class="container">
+        <header class="style1">
+          <h2>System Architecture</h2>
+          <hr>
+        </header>
+        <div class="feature-list row">
+          <p style="text-align: center;">Our software system architecture, presented in a diagram of class structures and how they interrelate.</p>
+          <img src="images/softwareArchitecture.png" style="text-align: center; width: 100%"/>
+        </div>
+        <header class="style1">
+          <h2>Use Cases</h2>
+          <hr>
+        </header>
+        <div class="feature-list row">
+          <div class="12u">
+            <p>Firstly, this is what an ideal use case will look like:</p>
+            <div style="margin: 0 0 0 6em;">
+              <ul style="list-style: inherit;">
+                <li>User inputs symbolic circuit schematic into the circuit diagrammer tool and notifies system when circuit is finished.</li>
+                <li>Software then gives feedback that the circuit is complete (in that all components are wired together).</li>
+                <li>User clicks components from the schematic and then places them onto the virtual breadboard diagrammer until all components are placed.</li>
+                <li>Software then gives feedback that both the circuit is complete and the symbolic diagram matches the breadboard diagram.</li>
+                <li>User places the components on the real breadboard.</li>
+                <li>User clicks "Run."</li>
+                <li>Hardware scans real breadboard nodal voltages and sends the data to the software.</li>
+                <li>Software displays nodal board voltages on the virtual breadboard and circuit diagram.</li>
+                <li>Software compares nodal voltage information to theoretical voltage analysis and verifies that voltages are in the right range of values.</li>
+                <li>User uses the nodal voltage information to gauge that the circuit was created correctly.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="12u">
+            <p>But of course, since this is a *debugging* board, error use cases that could come up are:</p>
+            <div style="margin: 0 0 0 6em;">
+              <ul style="list-style: inherit;">
+                <li>Software gives feedback that the symbolic circuit is incomplete (not all components are wired together), and highlights with a bolded dot where certain components are not connected.</li>
+                <li>Software gives feedback that the symbolic diagram does not match the breadboard diagram, and highlights via bolded nodes which nodes have no pair node in the other diagram.</li>
+                <li>Software compares nodal voltage information to theoretical voltage analysis, sees that the values differ from what they should be, and red rows in the software light up and the information is sent to the hardware.</li>
+                <li>Hardware has red LEDs on the physical breadboard light up where nodes have incorrect voltages.</li>
+                <li>User uses the nodal voltage information to gauge that the circuit was not created correctly as compared to their own theoretical expectations.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <header class="style1">
+          <h2>User-Interaction Diagram</h2>
+          <hr>
+        </header>
+        <div class="feature-list row">
+          <p style="text-align: center;">Our user interactions, as a visual representation of the hardware and software systems interacting with the user.</p>
+          <img src="images/userInteractionDiagram.png" style="text-align: center; width: 100%"/>
+        </div>
+
         </div>
       </div>
     </div>
