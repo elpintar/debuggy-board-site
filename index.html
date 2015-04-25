@@ -97,25 +97,25 @@
               <div class="image"><img src="images/aaron.png" alt="" /></div>
               <h3>Aaron Reyes</h3>
               <p>Hardware Warrior</p>
-              <a href="https://github.com/a-rey" class="button style3">Personal Site</a>
+              <a href="https://github.com/a-rey" target="blank" class="button style3">Personal Site</a>
             </div>
             <div class="3u">
               <div class="image"><img src="images/vivek.jpg" alt="" /></div>
               <h3>Vivek Nair</h3>
               <p>Systems Guru</p>
-              <a href="http://www.contrib.andrew.cmu.edu/~viveknai/" class="button style3">Personal Site</a>
+              <a href="http://www.contrib.andrew.cmu.edu/~viveknai/" target="blank" class="button style3">Personal Site</a>
             </div>
             <div class="3u">
               <div class="image"><img src="images/erik.jpg" alt="" /></div>
               <h3>Erik Pintar</h3>
               <p>UI Artisan</p>
-              <a href="http://erikpintar.com/" class="button style3">Personal Site</a>
+              <a href="http://erikpintar.com/" target="blank" class="button style3">Personal Site</a>
             </div>
             <div class="3u">
               <div class="image"><img src="images/justin.jpg" alt="" /></div>
               <h3>Justin Frye</h3>
               <p>Software Samurai</p>
-              <a href="https://github.com/jmfrye" class="button style3">Personal Site</a>
+              <a href="https://github.com/jmfrye" target="blank" class="button style3">Personal Site</a>
             </div>
           </div>
         </div>
@@ -145,7 +145,7 @@
           <div class="row">
             <div class="6u">
               <h3 class="icon fa-check">Status LED's</h3>
-              <p>Indicate the status of each pin row on the breadboard via an RGB LED.</p>
+              <p>Indicate the status of each pin row on the breadboard via an LED.</p>
             </div>
           </div>
         </div>
@@ -225,20 +225,20 @@
             <p>A.K.A our parts list.</p>
           </header>
           <div class="row" style="text-align:center;">
-            <div class="6u">
+            <div class="4u">
               <span class="image"><img src="images/crosspoint.jpg" alt="" /></span>
-              <h3><a href="http://www.analog.com/en/products/switches-multiplexers/unbuffered-analog-crosspoint-arrays/ad75019.html#product-overview">Crosspoint Switch</a></h3>
+              <h3><a href="http://www.analog.com/en/products/switches-multiplexers/unbuffered-analog-crosspoint-arrays/ad75019.html#product-overview" target="blank">Crosspoint Switch</a></h3>
               <p>
-                Required to make auto-routing possible. The main design choice here was <a href="http://www.analog.com/en/products/switches-multiplexers/buffered-analog-crosspoints-arrays/ad8113.html">buffered</a>
-                or <a href="http://www.analog.com/en/products/switches-multiplexers/unbuffered-analog-crosspoint-arrays/ad75019.html#product-overview">unbuffered</a>. Buffered has low internal resistance but has
+                Required to make auto-routing possible. The main design choice here was <a href="http://www.analog.com/en/products/switches-multiplexers/buffered-analog-crosspoints-arrays/ad8113.html" target="blank">buffered</a>
+                or <a href="http://www.analog.com/en/products/switches-multiplexers/unbuffered-analog-crosspoint-arrays/ad75019.html#product-overview" target="blank">unbuffered</a>. Buffered has low internal resistance but has
                 amplifiers on the outputs, which means we are "imitating" the user's signals and not routing them.
                 This can cause problems in circuits that use feedback. The unbuffered switch just contains a
                 matrix of analog switches. This means a higher internal resistance (approx 200 ohms), but now we
                 actually route signals instead of recreating them. They are also cheaper!</p>
             </div>
-            <div class="6u">
+            <div class="4u">
               <div class="image"><img src="images/adc.jpg" alt="" /></div>
-              <h3><a href="http://www.analog.com/en/products/analog-to-digital-converters/ad-converters/ad7366-5.html">Analog to Digital Converter</a></h3>
+              <h3><a href="http://www.analog.com/en/products/analog-to-digital-converters/ad-converters/ad7366-5.html" target="blank">Analog to Digital Converter</a></h3>
               <p>
                 To sense the DC voltages, we need an external ADC. We cannot use the MCU's on-chip ADC
                 since the voltage reference of the MCU's ADC is limited by the max supply voltage of
@@ -246,56 +246,47 @@
                 our ADC will have high supply rails (+/- 12v) to give the user more possibilities.
               </p>
             </div>
-          </div>
-          <div class="row" style="text-align:center;">
-            <div class="6u">
+            <div class="4u">
               <div class="image"><img src="images/mcu.jpg" alt="" /></div>
-              <h3><a href="http://www.atmel.com/devices/ATMEGA32U4.aspx">Microcontroller</a></h3>
+              <h3><a href="http://www.atmel.com/devices/ATMEGA32U4.aspx" target="blank">Microcontroller</a></h3>
               <p>
                 We need only a simple MCU. We decided to pick one with USB support in order to make
                 our communication protocol with the software application simple. Atmel MCU hack support
                 is fantastic online since the processor is widely used in arduino chips. This MCU is
-                responsible for receiving commands from the application to control the RGB LEDs, the
+                responsible for receiving commands from the application to control the LEDs, the
                 crosspoint switches, and track nodal voltages.
               </p>
             </div>
-            <div class="6u">
+          </div>
+          <div class="row" style="text-align:center;">
+            <div class="4u">
               <div class="image"><img src="images/mux.png" alt="" /></div>
-              <h3><a href="http://www.analog.com/en/products/switches-multiplexers/analog-switches-multiplexers/adg1406.html#product-overview">Analog Mux</a></h3>
+              <h3><a href="http://www.analog.com/en/products/switches-multiplexers/analog-switches-multiplexers/adg1406.html#product-overview" target="blank">Analog Mux</a></h3>
               <p>
                 Used to multiplex in all the breadboard nodes to the external ADC for DC voltage sampling.
                 These muxes also need to have the high supply rails of our ADC (+/- 12v) in order to allow
                 for the signals to pass through correctly.
               </p>
             </div>
-          </div>
-          <div class="row" style="text-align:center;">
-            <div class="6u">
+            <div class="4u">
               <div class="image"><img src="images/shiftregister.jpg" alt="" /></div>
-              <h3><a href="http://www.digikey.com/product-detail/en/SN74HC595DR/296-14857-1-ND/562567">Shift Registers</a></h3>
+              <h3><a href="http://www.digikey.com/product-detail/en/SN74HC595DR/296-14857-1-ND/562567" target="blank">Shift Registers</a></h3>
               <p>
-                Used to minimize IO from the MCU used to control the RGB LEDS along the breadboard.
+                Used to minimize IO from the MCU used to control the LEDS along the breadboard.
                 Nothing crazy here. Just some simple 8 bit shift registers. We need 6 ICs per a given
-                color to control a 48 node breadboard with an RGB LED for each node. Therefore, we
+                color to control a 48 node breadboard with an LED for each node. Therefore, we
                 need 18 total ICs.
               </p>
             </div>
-            <div class="6u">
+            <div class="4u">
               <div class="image"><img src="images/breadboard.jpg" alt="" /></div>
-              <h3><a href="https://www.pololu.com/product/350">Small Breadboard</a></h3>
+              <h3><a href="https://www.pololu.com/product/350" target="blank">Small Breadboard</a></h3>
               <p>
                 The all-important breadboard. Due to our budget, we can only afford a 48
                 node board. We achieve this by daisy chaining crosspoint switches. Using
                 a 16x16 switch, we need a grid of 9 switches total to have 48 unique nodes.
                 These 9 switches will exhaust the majority of our budget.
               </p>
-            </div>
-          </div>
-          <div class="row" style="text-align:center;">
-            <div class="6u">
-              <div class="image"><img src="images/rgbLED.jpg" alt="" /></div>
-              <h3><a href="http://www.adafruit.com/product/619">RGB LEDs</a></h3>
-              <p>The SMD RGB LEDs used for each pin row on the breadboard (48 total).</p>
             </div>
           </div>
         </div>
@@ -316,7 +307,7 @@
                 backend to route nodes. Their design and goals are similar to ours, but lack the real-time
                 voltage tracking that is essential for our debugging application.
               </p>
-              <a href="https://www.youtube.com/watch?v=2W9zznZocqw" class="button style3">Learn More</a>
+              <a href="https://www.youtube.com/watch?v=2W9zznZocqw" target="blank" class="button style3">Learn More</a>
             </div>
           </div>
           <div class="6u">
@@ -330,7 +321,7 @@
                 is actually made by the Egyptian Team. This product is currently not for sale
                 as it is still in development.
               </p>
-              <a href="http://smartbreadboard.tictail.com" class="button style3">Learn More</a>
+              <a href="http://smartbreadboard.tictail.com" target="blank" class="button style3">Learn More</a>
             </div>
           </div>
         </div>
@@ -342,21 +333,13 @@
               <p>
                 There have been two similar projects within Carnegie Mellon’s annual Build18 hardware
                 hackathon.
-              </p>
-              <p>
-                The <a href="http://build18.ece.cmu.edu/wiki/index.php/ProtoSmart">ProtoSmart team</a>
-                created a breadboard that sensed voltages at each row of a small breadboard. However,
-                that design was limited by the on-chip analog to digital converters of the microcontroller
-                which can usually only sense 0 to 5v signals.
-              </p>
-              <p>
-                The <a href="http://build18.ece.cmu.edu/wiki/index.php/Field_Programmable_Proto-board">
+                The <a href="http://build18.ece.cmu.edu/wiki/index.php/ProtoSmart" target="blank">ProtoSmart team</a>
+                created a breadboard that sensed voltages at each row of a small breadboard.
+                The <a href="http://build18.ece.cmu.edu/wiki/index.php/Field_Programmable_Proto-board" target="blank">
                 Field Programmable Protoboard team</a> set out to make a breadboard that wires rows together
-                for you (auto-routing). However, the sheer size of the routing became to complex to
-                accomplish for them using only transistors and shift registers. This design was also only
-                limited to routing digital circuits.
+                for you (auto-routing).
               </p>
-              <a href="http://build18.org/" class="button style3">Learn More</a>
+              <a href="http://build18.org/" target="blank" class="button style3">Learn More</a>
             </div>
           </div>
           <div class="6u">
@@ -367,8 +350,9 @@
                 This team is still a work in progress, but has a nifty video. They aim to
                 create a breadboard that communicates wirelessly with a computer or your
                 smartphone, which is an interesting feature we are not including.
+                The goal for their product is also very similar to ours: reduce circuit-building frustration!
               </p>
-              <a href="https://vimeo.com/98339147" class="button style3">See Video</a>
+              <a href="https://vimeo.com/98339147" target="blank" class="button style3">See Video</a>
             </div>
           </div>
         </div>
@@ -376,61 +360,55 @@
     </div>
 
     <!-- Design -->
-    <div class="wrapper style3">
+    <div class="wrapper style3"  style="padding-bottom:50px;">
       <div class="title" id="design">Design</div>
       <div class="container">
-        <header class="style1">
+        <header class="style1 no-top-padding" style="padding-top:0px;">
           <h2>System Architecture</h2>
           <hr>
         </header>
         <div class="feature-list row">
-          <p style="text-align: center;">Our software system architecture, presented in a diagram of class structures and how they interrelate.</p>
-          <img src="images/softwareArchitecture.png" style="text-align: center; width: 100%"/>
+          <p style="text-align: center; padding-top:0px;">Our software system architecture, presented in a diagram of class structures and how they interrelate.</p>
+          <div style="text-align:center;width:100%;">
+            <img src="images/softwareArchitecture.png" style="text-align: center; max-height: 400px; max-width: 100%;"/>
+          </div>
         </div>
         <header class="style1">
           <h2>Use Cases</h2>
           <hr>
         </header>
         <div class="feature-list row">
-          <div class="12u">
-            <p>Firstly, this is what an ideal use case will look like:</p>
+          <div class="6u" style="padding-top:0px;">
+            <p>This is what an ideal use case will look like:</p>
             <div style="margin: 0 0 0 6em;">
               <ul style="list-style: inherit;">
-                <li>User inputs symbolic circuit schematic into the circuit diagrammer tool and notifies system when circuit is finished.</li>
-                <li>Software then gives feedback that the circuit is complete (in that all components are wired together).</li>
-                <li>User clicks components from the schematic and then places them onto the virtual breadboard diagrammer until all components are placed.</li>
-                <li>Software then gives feedback that both the circuit is complete and the symbolic diagram matches the breadboard diagram.</li>
+                <li>User inputs symbolic circuit schematic into the circuit diagrammer.</li>
+                <li>User moves components from the schematic to the virtual breadboard.</li>
                 <li>User places the components on the real breadboard.</li>
-                <li>User clicks "Run."</li>
-                <li>Hardware scans real breadboard nodal voltages and sends the data to the software.</li>
-                <li>Software displays nodal board voltages on the virtual breadboard and circuit diagram.</li>
-                <li>Software compares nodal voltage information to theoretical voltage analysis and verifies that voltages are in the right range of values.</li>
-                <li>User uses the nodal voltage information to gauge that the circuit was created correctly.</li>
+                <li>Hardware scans real breadboard nodal voltages and sends the data to the software, displayed as useful debugging information.</li>
               </ul>
             </div>
           </div>
-          <div class="12u">
-            <p>But of course, since this is a *debugging* board, error use cases that could come up are:</p>
+          <div class="6u" style="padding-top:0px;">
+            <p>Error use cases that could come up are:</p>
             <div style="margin: 0 0 0 6em;">
               <ul style="list-style: inherit;">
-                <li>Software gives feedback that the symbolic circuit is incomplete (not all components are wired together), and highlights with a bolded dot where certain components are not connected.</li>
-                <li>Software gives feedback that the symbolic diagram does not match the breadboard diagram, and highlights via bolded nodes which nodes have no pair node in the other diagram.</li>
-                <li>Software compares nodal voltage information to theoretical voltage analysis, sees that the values differ from what they should be, and red rows in the software light up and the information is sent to the hardware.</li>
-                <li>Hardware has red LEDs on the physical breadboard light up where nodes have incorrect voltages.</li>
-                <li>User uses the nodal voltage information to gauge that the circuit was not created correctly as compared to their own theoretical expectations.</li>
+                <li>The symbolic circuit is incomplete (not all components are wired or have values associated with them); software highlights wrong components.</li>
+                <li>The symbolic diagram does not match the breadboard diagram; software highlights which nodes don't match.</li>
+                <li>Theoretical voltages differ from real voltages; rows in the software light up red as well as red LEDs on the physical board!</li>
               </ul>
             </div>
           </div>
         </div>
-        <header class="style1">
+        <header class="style1"  style="padding-top:0px;">
           <h2>User-Interaction Diagram</h2>
           <hr>
         </header>
         <div class="feature-list row">
-          <p style="text-align: center;">Our user interactions, as a visual representation of the hardware and software systems interacting with the user.</p>
-          <img src="images/userInteractionDiagram.png" style="text-align: center; width: 100%"/>
-        </div>
-
+          <p style="text-align: center; padding-top:0px;">Our user interactions, as a visual representation of the hardware and software systems interacting with the user.</p>
+          <div style="text-align:center;width:100%;">
+            <img src="images/userInteractionDiagram.png" style="text-align: center; max-height: 500px; max-width: 100%;"/>
+          </div>
         </div>
       </div>
     </div>
@@ -438,8 +416,8 @@
     <!-- Progress -->
     <div class="wrapper style2">
       <div class="title" id="prog">Progress</div>
-      <div class="container">
-        <header class="style1">
+      <div class="container prog">
+        <header class="style1" style="padding-top:0px; padding-bottom:0px;">
           <h2>So what have we done so far?</h2>
           <p><i>"If there is no struggle, there is no progress."</i> - Frederick Douglass</p>
           <hr>
@@ -448,85 +426,120 @@
           <div>
             <div class="12u">
               <h3 class="icon fa-code">16 March 2015</h3>
-              <p>
-                <a target="blank" href="images/updates/3_16_2015_sw.png">Bare-bone circuit routing GUI</a>.
-                Working on symbolic circuit diagrammer UI and enhancing circuit routing UI.
-              </p>
-              <p>
-                <a target="blank" href="images/updates/3_16_2015_hw.png">Eagle schematic of LEDs and MCU with peripherals</a>.
-                Working on adding ADC with muxes and then making sure design passes ERC check.
-              </p>
+              <div class="row">
+                <div class="5u" style="margin-left: 100px;">
+                  <a class="img-container" href="images/updates/3_16_2015_hw.png" target="blank">
+                    <img src="images/updates/3_16_2015_hw.png">
+                  </a>
+                  <b>Eagle schematic of LEDs and MCU with peripherals</b>.
+                  Working on adding ADC with muxes and then making sure design passes ERC check.
+                </div>
+                <div class="5u">
+                  <a class="img-container" href="images/updates/3_16_2015_sw.png" target="blank">
+                    <img src="images/updates/3_16_2015_sw.png">
+                  </a>
+                  <b>Bare-bone circuit routing GUI</b>.
+                  Working on symbolic circuit diagrammer UI and enhancing circuit routing UI.
+                </div>
+              </div>
             </div>
           </div>
           <div>
             <div class="12u">
               <h3 class="icon fa-code">23 March 2015</h3>
-              <p>
-                <a target="blank" href="images/updates/3_23_2015_sw.png">GUI sidebars, node detection, and basic use of pySPICE</a>.
-                Working on connecting pySPICE to a circuit diagrammer UI and drawing resistors and capacitors as wire objects instead of blocks.
-              </p>
-              <p>
-                <a target="blank" href="images/updates/3_23_2015_hw.png">Near-complete Eagle schematic for full hardware design without switching matrix</a>.
-                Working on connecting muxes, ADC, and shift registers to MCU to minimize IO usage. After adding power circuit to schematic, we will
-                layout our PCB and make a custom part/footprint for the breadboard to connect to the PCB (hopefully all by next checkpoint).
-              </p>
+              <div class="row">
+                <div class="5u" style="margin-left: 100px;">
+                  <a class="img-container" href="images/updates/3_23_2015_hw.png" target="blank">
+                    <img src="images/updates/3_23_2015_hw.png">
+                  </a>
+                  <b>Near-complete Eagle schematic for full hardware design without switching matrix</b>.
+                  Working on connecting muxes, ADC, and shift registers to MCU to minimize IO usage. After adding power circuit to schematic, we will
+                  layout our PCB and make a custom part/footprint for the breadboard to connect to the PCB (hopefully all by next checkpoint).
+                </div>
+                <div class="5u">
+                  <a class="img-container" href="images/updates/3_23_2015_sw.png" target="blank">
+                    <img src="images/updates/3_23_2015_sw.png">
+                  </a>
+                  <b>GUI sidebars, node detection, and basic use of pySPICE</b>.
+                  Working on connecting pySPICE to a circuit diagrammer UI and drawing resistors and capacitors as wire objects instead of blocks.
+                </div>
+              </div>
             </div>
           </div>
           <div>
             <div class="12u">
               <h3 class="icon fa-code">30 March 2015</h3>
-              <p>
-                <a target="blank" href="images/updates/3_30_2015_sw.png">Circuit Solving using Ahkab and Symbolic Circuit Diagrammer Design:</a>  (1) We can solve basic circuits using Ahkab (Python circuit solving library), reading in circuits from netlist files.  Our circuit diagrammer will ultimately output a netlist file to Ahkab for analysis.  (2) We planned the design for the symbolic circuit diagrammer, allowing for significant code reuse with the existing circuit router.  (3) We also made UI updates to the circuit router with improved graphics for wires and resistors.  (4) We fixed a bug in our node detection algorithm.
-              </p>
-              <p>
-                <a target="blank" href="images/updates/3_30_2015_hw.png">Completed eagle schematic</a>!
-                We will have the PCB layout by <strong>next checkpoint</strong> with all parts in our parts list ordered.
-                While the board is being fabbed, we will write the firmware and collect our parts. <a href="https://docs.google.com/spreadsheets/d/19jtvPiaG86AgUPa70dK08edDl3pxMptlXzroNsNZUoE/edit?usp=sharing">Here</a>
-                is our full parts list.
-              </p>
+              <div class="row">
+                <div class="5u" style="margin-left: 100px;">
+                  <a class="img-container" href="images/updates/3_30_2015_hw.png" target="blank">
+                    <img src="images/updates/3_30_2015_hw.png">
+                  </a>
+                  <b>Completed eagle schematic</b>
+                  We will have the PCB layout by <strong>next checkpoint</strong> with all parts in our parts list ordered.
+                  While the board is being fabbed, we will write the firmware and collect our parts. <a href="https://docs.google.com/spreadsheets/d/19jtvPiaG86AgUPa70dK08edDl3pxMptlXzroNsNZUoE/edit?usp=sharing" target="blank">Here</a>
+                  is our full parts list.
+                </div>
+                <div class="5u">
+                  <a class="img-container" href="images/updates/3_30_2015_sw.png" target="blank">
+                    <img src="images/updates/3_30_2015_sw.png">
+                  </a>
+                  <b>Circuit solving using Ahkab and symbolic circuit diagrammer design</b>. We can solve basic circuits using Ahkab (Python circuit solving library). We also made UI updates to the circuit router with improved graphics for wires and resistors.
+                </div>
+              </div>
             </div>
           </div>
           <div>
             <div class="12u">
               <h3 class="icon fa-code">6 April 2015</h3>
-              <p>
-                <a target="blank" href="images/updates/4_6_2015_sw.png">Symbolic circuit diagrammer</a> is now shown right above the breadboard diagrammer.  Functionality added to add values to components.  Also a nice UI improvement of a transparent preview of the component you are currently placing.
-              </p>
-              <p>
-                <a target="blank" href="images/updates/4_6_2015_hw.png">The routing for the board without crosspoint switches</a> is done. That is being shipped out today.
-                We will then ship out the board with crosspoint switches this Thursday to be fabbed.  <a target="blank" href="images/updates/4_6_2015_hw_old.png">Also, almost done with board routing</a>!
-              </p>
-            </div>
-          </div>
-          <div>
-            <div class="12u">
-              <h3 class="icon fa-code">9 April 2015</h3>
-              <p>
-                <a target="blank" href="images/updates/4_9_2015_hw.png">Completed EAGLE routing</a>!
-                Board was shipped out today. Beginning to write firmware.
-              </p>
+              <div class="row">
+                <div class="5u" style="margin-left: 100px;">
+                  <a class="img-container" href="images/updates/4_6_2015_hw.png" target="blank">
+                    <img src="images/updates/4_6_2015_hw.png">
+                  </a>
+                  <b>The routing for the board without crosspoint switches</b> is done. That is being shipped out today.
+                  We will then ship out the board with crosspoint switches this Thursday to be fabbed.
+                </div>
+                <div class="5u">
+                  <a class="img-container" href="images/updates/4_6_2015_sw.png" target="blank">
+                    <img src="images/updates/4_6_2015_sw.png">
+                  </a>
+                  <b>Symbolic circuit diagrammer</b> is now shown right above the breadboard diagrammer.  Functionality added to add values to components.  Also a nice UI improvement of a transparent preview of the component you are currently placing.
+                </div>
+              </div>
             </div>
           </div>
           <div>
             <div class="12u">
               <h3 class="icon fa-code">13 April 2015</h3>
-              <p>
-                <a target="blank" href="https://www.dropbox.com/s/rliys5wgrt7wb41/549team1demoTminus9days.mov?dl=0">Ahkab Integration Progress and GUI Improvements</a>: 
-                Made significant progress integrating ahkab (Python circuit solver library) into DeBuggyBoard!  Ahkab runs and attempts to verify the circuit when components are placed on the diagrammer.  Added voltage source component for diagrammer, delete button for circuit components, and undo/redo functionality.  Can select circuit components not only by clicking on their nodes but also by clicking on the actual components.
-              </p>
+              <div class="row">
+                <div class="5u" style="margin-left: 100px;">
+                  <a class="img-container" href="images/updates/4_9_2015_hw.png" target="blank">
+                    <img src="images/updates/4_9_2015_hw.png">
+                  </a>
+                  <b>Completed EAGLE routing</b>!
+                  Board was shipped out 4/9/15. Beginning to write firmware.
+                </div>
+                <div class="5u">
+                  <a class="img-container" href="https://www.dropbox.com/s/rliys5wgrt7wb41/549team1demoTminus9days.mov?dl=0" target="blank">
+                    <img src="images/updates/4_13_2015_dropbox_vid.png">
+                  </a>
+                  <b>Ahkab Integration Progress and GUI Improvements</b>: 
+                  Made significant progress integrating ahkab (Python circuit solver library) into DeBuggyBoard!  Ahkab runs and attempts to verify the circuit when components are placed on the diagrammer.  Added voltage source component for diagrammer, delete button for circuit components, and undo/redo functionality.  Can select circuit components not only by clicking on their nodes but also by clicking on the actual components.
+                </div>
+              </div>
             </div>
           </div>
         </div>
         <hr>
         <div class="row 90%">
           <div class="6u" style="text-align: center;">
-            <a href="https://github.com/elpintar/debuggy-board-app" class="button style1" target="blank">
-              <span class="icon fa-github fa-lg"></span>Software Repo
+            <a href="https://github.com/jmfrye/DeBuggyBoard" target="blank" class="button style1" target="blank">
+              <span class="icon fa-github fa-lg"></span>Hardware Repo
             </a>
           </div>
           <div class="6u" style="text-align: center;">
-            <a href="https://github.com/jmfrye/DeBuggyBoard" class="button style1" target="blank">
-              <span class="icon fa-github fa-lg"></span>Hardware Repo
+            <a href="https://github.com/elpintar/debuggy-board-app" target="blank" class="button style1" target="blank">
+              <span class="icon fa-github fa-lg"></span>Software Repo
             </a>
           </div>
         </div>

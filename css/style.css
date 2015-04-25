@@ -336,6 +336,18 @@ ol.default li {
   text-align: center;
 }
 
+.prog .feature-list a.img-container {
+  text-align: center;
+  display: block;
+  height:200px; 
+  width:460px;
+}
+
+.prog .feature-list img {
+  max-height:200px; 
+  max-width:460px;
+}
+
 /*********************************************************************************/
 /* Icons                                                                         */
 /*********************************************************************************/
@@ -455,7 +467,7 @@ ol.default li {
 }
 
 #header-wrapper {
-  background: url('../images/banner.jpg') center center;
+  background: url('../images/updates/4_9_2015_hw.png') center center;
   background-size: cover;
 }
 
@@ -523,6 +535,10 @@ ol.default li {
   background: #3d4249 url('images/overlay.png');
 }
 
+.no-top-padding {
+  padding-top: 0px;
+}
+
 /*********************************************************************************/
 /* Logo                                                                          */
 /*********************************************************************************/
@@ -538,8 +554,12 @@ ol.default li {
 
 #logo p {
   color: #eee;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255,255,255);
   text-transform: uppercase;
+}
+
+#logo p a {
+  color: white;
 }
 
 /*********************************************************************************/
