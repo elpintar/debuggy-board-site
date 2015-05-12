@@ -23,6 +23,7 @@
         <!-- Nav -->
         <nav id="nav">
           <ul>
+            <li><a href="#video">Video</a></li>
             <li><a href="#concept">Concept</a></li>
             <li><a href="#motivation">Motivation</a></li>
             <li><a href="#team">Team</a></li>
@@ -36,11 +37,34 @@
       </div>
     </div>
 
+    <!-- Video -->
+    <div class="wrapper style3">
+      <div class="title" id="video">The Video</div>
+      <div style="width: 1000px; height: 562px; margin: 0 auto;">
+        <iframe src="https://player.vimeo.com/video/127594286" 
+          width="1000" height="562" frameborder="0" 
+          webkitallowfullscreen mozallowfullscreen allowfullscreen>
+        </iframe> 
+        <p><a href="https://vimeo.com/127594286">DeBuggyBoard</a></p>
+      </div>
+    </div>
     <!-- Intro -->
     <div class="wrapper style1">
       <div class="title" id="concept">The Concept</div>
       <div id="intro" class="container">
         <p class="style1">What is (De)Buggy Board?</p>
+        <div>
+          <span>
+            <img src="images/step1-plan.png" alt="Step 1: Plan" style="width:25%; margin:2%">
+            <img src="images/step2-connect.png" alt="Step 2: Connect" style="width:33%">
+            <img src="images/step3-debug.png" alt="Step 3: Debug" style="width:25%; margin:2%">
+          </span>
+        </div>
+        <div>
+          <p class="style1">
+            Plan &nbsp; &nbsp; &nbsp; > &nbsp; &nbsp; &nbsp; Connect &nbsp; &nbsp; &nbsp; >  &nbsp; &nbsp; &nbsp; Debug
+          </p>
+        </div>
         <p class="style2">
           An interactive, educational breadboard to ease circuit-building and debugging.
         </p>
@@ -523,8 +547,7 @@
                   <a class="img-container" href="https://www.dropbox.com/s/rliys5wgrt7wb41/549team1demoTminus9days.mov?dl=0" target="blank">
                     <img src="images/updates/4_13_2015_dropbox_vid.png">
                   </a>
-                  <b>Ahkab Integration Progress and GUI Improvements</b>:
-                  Made significant progress integrating ahkab (Python circuit solver library) into DeBuggyBoard!  Ahkab runs and attempts to verify the circuit when components are placed on the diagrammer.  Added voltage source component for diagrammer, delete button for circuit components, and undo/redo functionality.  Can select circuit components not only by clicking on their nodes but also by clicking on the actual components.
+                  <b>Ahkab Integration Progress and GUI Improvements</b>. Ahkab runs and attempts to verify the circuit when components are placed on the diagrammer.  We added a voltage source component for diagrammer, delete button for circuit components, and undo/redo functionality.  Users can select circuit components not only by clicking on their nodes but also by clicking on the actual components.
                 </div>
               </div>
             </div>
@@ -543,8 +566,64 @@
                   <a class="img-container" href="images/updates/4_20_2015_sw.png" target="blank">
                     <img src="images/updates/4_20_2015_sw.png">
                   </a>
-                  <b>Voltage labels and Ahkab board integration</b>:
-                  Diagrammer nodes are labeled with their calculated voltages and intelligently positioned. Users can click components on the diagrammer and move them to the board making synced components. Diagrammer resistors are now the squiggly kind we know and love.
+                  <b>Voltage labels and Ahkab board integration</b>. Diagrammer nodes are labeled with their calculated voltages and intelligently positioned. Users can click components on the diagrammer and move them to the board making synced components. Diagrammer resistors are now the squiggly kind we know and love.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="12u">
+              <h3 class="icon fa-code">27 April 2015</h3>
+              <div class="row">
+                <div class="5u" style="margin-left: 100px;">
+                  <a class="img-container" href="images/updates/4_27_2015_hw.png" target="blank">
+                    <img src="images/updates/4_27_2015_hw.png">
+                  </a>
+                  <b>Soldered components onto board - Whew</b>!  The MCU and LEDs are operational now.  With minor exceptions, all components are soldered to the board, and we are ready for full board bringup. 
+                </div>
+                <div class="5u">
+                  <a class="img-container" href="images/updates/4_27_2015_sw.png" target="blank">
+                    <img src="images/updates/4_27_2015_sw.png">
+                  </a>
+                  <b>Comparing Diagrammer and Board Circuits in Ahkab</b>. The intended user flow is functionally complete.  Users can make a circuit with the diagrammer, transfer its components to the Board, check that the two are equal, and begin measuring voltages from hardware.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="12u">
+              <h3 class="icon fa-code">2 May 2015: Final Demo</h3>
+              <div class="row">
+                <div class="5u" style="margin-left: 100px;">
+                  <a class="img-container" href="images/updates/5_02_2015_hw.png" target="blank">
+                    <img src="images/updates/5_02_2015_hw.png">
+                  </a>
+                  <b>(Mostly) Completed Board Bringup</b>. The crosspoint switches (reach goal) are operational; the ADC is working but noisy, causing nodal voltage sampling woes.
+                </div>
+                <div class="5u">
+                  <a class="img-container" href="images/updates/5_02_2015_sw.png" target="blank">
+                    <img src="images/updates/5_02_2015_sw.png">
+                  </a>
+                  <b>Completed Autorouting feature in Software</b>. Dashed lines represent autorouted wires, which users can see in software but do not place on the physical breadboard.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="12u">
+              <h3 class="icon fa-code">8 May 2015: Public Demo</h3>
+              <div class="row">
+                <div class="5u" style="margin-left: 100px;">
+                  <a class="img-container" href="images/updates/5_08_2015_hw.png" target="blank">
+                    <img src="images/updates/5_08_2015_hw.png">
+                  </a>
+                  <b>Nodal Voltage Sampling and Auto-routing Functional</b>. We can measure nodal voltages in real-time using the ADC, and we can auto-route circuits via the crosspoint switches through the software auto-routing feature.  Victory.
+                </div>
+                <div class="5u">
+                  <a class="img-container" href="images/updates/5_08_2015_sw.png" target="blank">
+                    <img src="images/updates/5_08_2015_sw.png">
+                  </a>
+                  <b>Updated Diode Model for LEDs and More Robust Circuit Equivalence Checking</b>.  We represent the diode as a constant voltage drop as often done in introductory circuits courses.  We rewrote the Diagrammer and Board equivalent circuit checker to improve robustness and fix bugs.
                 </div>
               </div>
             </div>
